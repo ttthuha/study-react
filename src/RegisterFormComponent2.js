@@ -20,22 +20,11 @@ const registerForm = (props) => {
 
     var country_list = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola"]
     return <Form>
-        <FormField labelName="First name" type ="text" placeholder="Enter first name" onChangeFn={setFirstNameFn} value ={firstName}/>
+        <FormField labelName="First name" type ="firstname" placeholder="Enter first name" onChangeFn={setFirstNameFn} value ={firstName}/>
 
-        <FormField labelName="Last name" type="lastName" placeholder="Enter Last name" onChangeFn={setLastNameFn} value={lastName} />
+        <FormField labelName="Last name" type="lastName" placeholder="Enter Last name" onChangeFn={setLastNameFn} value={lastName}/>
 
-        <Form.Group controlId="formBasicScreenName">
-            <Row>
-                <Col sm={3}>
-                    <Form.Label>Screen name</Form.Label>
-                </Col>
-                <Col sm={9}>
-                    <Form.Control type="screenName" placeholder="Enter Screen name" onChange={setScreenNameFn} value={screenName} />
-                </Col>
-            </Row>
-        </Form.Group>
-
-
+        <FormField labelName="Screen name" type="screenName" placeholder="Enter Screen name" onChangeFn={setScreenNameFn} value={screenName}/>
 
         <Form.Group controlId="formBasicDoB">
             <Row>
@@ -100,27 +89,9 @@ const registerForm = (props) => {
         </Form.Group>
         </fieldset>
 
-        <Form.Group controlId="formBasicEmail">
-            <Row>
-                <Col sm={3}>
-                    <Form.Label>Email name</Form.Label>
-                </Col>
-                <Col sm={9}>
-                    <Form.Control type="email" placeholder="Enter Email" onChange={setEmailFn} value={email} />
-                </Col>
-            </Row>
-        </Form.Group>
-
-        <Form.Group controlId="formBasicPhone">
-            <Row>
-                <Col sm={3}>
-                    <Form.Label>Phone name</Form.Label>
-                </Col>
-                <Col sm={9}>
-                    <Form.Control type="phone" placeholder="Enter Phone" onChange={setPhoneFn} value={phone} />
-                </Col>
-            </Row>
-        </Form.Group>
+        <FormField labelName="Email" type="email" placeholder="Enter Email" onChangeFn={setEmailFn} value={email}/>
+        
+        <FormField labelName="Phone" type="phone" placeholder="Enter Phone" onChangeFn={setPhoneFn} value={phone}/>
 
         <Button variant="success" type="submit" onClick={clickFn}>
             Register Now

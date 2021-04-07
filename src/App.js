@@ -10,6 +10,9 @@ import TestRegisterComponent from './RegisterFormComponent'
 import TestRegisterComponent2 from './RegisterFormComponent2'
 
 import TestRegisterFormComponent from './TestRegisterFormComponent'
+import TestApi from './APIComponent'
+import TestProductManagerComponent from './ProductManagerComponent'
+import Test from './Test'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -37,11 +40,14 @@ const App = () => {
       <TestHtmlComponent/>
       <TestRegisterComponent/>
       <TestRegisterComponent2/>
-
-      
+      <TestRegisterFormComponent/>
+       <TestApi/>
+       <Test/>
     */}
-
-    <TestRegisterFormComponent/>
+     
+      <TestProductManagerComponent/>
+     
+   
 
     </div>
   );
