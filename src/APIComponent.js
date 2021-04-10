@@ -87,7 +87,7 @@ class UserList extends React.Component {
             }}>Close</Button>
         </div>
     }
-
+    
     createUser(user, i) {
         return <Row>
             <Col sm={5}>{user.name} </Col>
