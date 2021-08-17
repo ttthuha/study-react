@@ -1,54 +1,39 @@
-
-import './App.css';
-import NewCom from './NewComponent'
-import TestStateComponent from './StateComponent';
-import TestCalculatorComponent from './CalculatorComponent'
-import TestCounterComponent from './CounterComponent'
-import TestHtmlComponent from './HtmlTestComponent'
-import TestHtmlComponent2 from './HtmlTestComponent2'
-import TestRegisterComponent from './RegisterFormComponent'
-import TestRegisterComponent2 from './RegisterFormComponent2'
-
-import TestRegisterFormComponent from './TestRegisterFormComponent'
-import TestApi from './APIComponent'
-import TestProductManagerComponent from './ProductManagerComponent'
-import Test from './Test'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import {
+  BrowserRouter,
+  Switch,
+  Route
 
+} from 'react-router-dom'
 
-
-
-const x = <div>abc</div>
-const X = ({ name }) => <div>{name}</div>
-const func = ()=> {console.log('call from parents')}
+import TestProductManagerComponent from './ProductManagerComponent'
+import ProductDetail from './ProductDetail';
+import Login from './LoginComponent'
 
 
 const App = () => {
 
-  const X2 = ({ cl, school }) => <div>
-    class: {cl}, school:{school}
-  </div>
-
   return (
     <div className='App'>
-     {/*
-     <NewCom name="Ha" age={20} gender="Nu" func = {func}/>
-      {NewCom({ name: "Ha", age: 20, gender: "nu", func: func})}
-      <TestStateComponent/>
-      <TestCalculatorComponent/>
-      <TestCounterComponent/>
-      <TestHtmlComponent/>
-      <TestRegisterComponent/>
-      <TestRegisterComponent2/>
-      <TestRegisterFormComponent/>
-       <TestApi/>
-       <Test/>
-    */}
-     
-      <TestProductManagerComponent/>
-     
-   
 
+      {/* <BrowserRouter>
+        <Switch>
+          <Route path='/products/:productId'>
+            <ProductDetail />
+          </Route>
+          <Route path='/products'>
+            <TestProductManagerComponent />
+          </Route>
+
+          <Route path='/'>
+            <p>Day la homepage</p>
+          </Route>
+
+        </Switch>
+      </BrowserRouter> */}
+
+      <Login/>
     </div>
   );
 }
